@@ -1,0 +1,29 @@
+[package]
+name = "vessel"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+aes = "0.8.2"
+rust-argon2 = "1.0"
+block-modes = "0.9.1"
+clap = { version = "4.1.4", features = ["cargo"] }
+random-string = "1.0.0"
+rpassword = "7.2.0"
+serde = "1.0.152"
+serde_derive = "1.0.152"
+serde_json = "1.0.93"
+sha2 = "0.10.6"
+rand = "0.8.5"
+chacha20poly1305 = {version = "0.9.0", features = ["stream"] }
+anyhow = "1.0"
+zeroize = "1.4"
+cli-clipboard = "0.4.0"
+
+[profile.release]
+strip = true
+lto = true
+codegen-units = 1
+
